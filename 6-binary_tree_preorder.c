@@ -3,17 +3,6 @@
 #include <stdio.h>
 
 /**
- * print_val - Prints a number
- *
- * @n: Number to be printed
- */
-void print_val(int n)
-{
-	printf("%d\n", n);
-}
-
-
-/**
  * binary_tree_preorder - Performs a pre-order traversal on a binary tree.
  * @tree: Pointer to the root node of the binary tree.
  * @func: Pointer to a function to be applied to each node's value.
@@ -27,9 +16,9 @@ void print_val(int n)
  * @tree: Pointer to the current node being processed.
  * @func: Pointer to a function that takes an integer value and returns void.
  */
+
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
-	func = print_val;  /* Note: Assuming print_val is a predefined function */
 
 	if (!tree || !func)
 		return;
@@ -38,4 +27,3 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 	binary_tree_preorder(tree->left, func);
 	binary_tree_preorder(tree->right, func);
 }
-
