@@ -27,6 +27,7 @@ int is_bst_util(const binary_tree_t *tree, int min, int max)
  *
  * Return: 1 if the tree is a BST, otherwise 0.
  */
+
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	if (!tree)
